@@ -22,7 +22,7 @@
 			<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 				<div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
 
-					<a href="#" @click="deleteSelectedUsers"
+					<a href="#"
 						class="float-left px-4 py-2 mt-3 text-red-400 duration-100 rounded hover:text-red-600">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor"
@@ -94,7 +94,7 @@
 								</td>
 								<td class="px-6 py-4 whitespace-nowrap">
 									<div class="text-sm text-center text-gray-900">
-										{{ user.id }}
+										{{ 1 }}
 									</div>
 								</td>
 								<td>
@@ -108,46 +108,30 @@
 										<div class="ml-4">
 											<div class="text-sm font-medium text-gray-900">
 												<inertia-link class="transition hover:text-blue-500"
-													:href="`users/${user.id}`">{{ user.name }}</inertia-link>
+													:href="">{{ Poonam Khatri}}</inertia-link>
 											</div>
 										</div>
 									</div>
 								</td>
 								<td class="px-6 py-4 whitespace-nowrap">
 									<div class="text-sm text-center text-gray-900">
-										<a :href="'mailto:' + user.email">{{ user.email }}</a>
+										<a :href="'mailto:' + poonam.khatri.691@gmail.com">{{ poonam.khatri.691@gmail.com }}</a>
 									</div>
 								</td>
 								<td class="px-6 py-4 whitespace-nowrap">
 									<div class="text-sm text-center text-gray-900">
-										{{ user.role ? user.role.name : 'Not available' }}
+										{{  Admin: 'available' }}
 									</div>
 								</td>
 								<td class="px-6 py-4 text-center whitespace-nowrap">
 									<span
 										class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
-										{{ user.formatted_created_at }}
+										{{  }}
 									</span>
 								</td>
 								<td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
 
-									<inertia-link :href="`/users/${user.id}/edit`"
-										class="float-left px-4 py-2 text-green-400 duration-100 rounded hover:text-green-600">
-										<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-											viewBox="0 0 24 24" stroke="currentColor">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-										</svg></inertia-link>
-
-									<a href="#" @click="deleteUser(user)"
-										class="float-left px-4 py-2 ml-2 text-red-400 duration-100 rounded hover:text-red-600">
-										<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-											viewBox="0 0 24 24" stroke="currentColor">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-										</svg>
-									</a>
-
+									
 								</td>
 							</tr>
 						</tbody>
@@ -160,8 +144,8 @@
 </template>
 
 <script>
-import Pagination from '@/Components/Pagination.vue';
-import AppLayout from '@/Layouts/AppLayout.vue';
+import Pagination from './Components/Pagination.vue';
+import AppLayout from './Layouts/AppLayout.vue';
 export default {
 	components: {
 		AppLayout,

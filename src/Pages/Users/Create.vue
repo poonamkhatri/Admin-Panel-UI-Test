@@ -95,24 +95,7 @@ export default {
     props: {
         errors: Object,
     },
-    data() {
-        return {
-            form: this.$inertia.form({
-                name: '',
-                email: '',
-                role_id: 2,
-                password: '',
-                avatar: null,
-                description: ''
-            })
-        }
-    },
-    methods: {
-        submit() {
-            this.form.post(this.route('users.store'), {
-                _token: this.$page.props.csrf_token,
-            });
-        }
-    }
+   
+   
 }
 </script>
